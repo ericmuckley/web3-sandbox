@@ -1,5 +1,4 @@
 <script>
-
     import { utils } from '../utils.js'
 
     export let data
@@ -38,7 +37,7 @@
                             <button
                                 on:click={() => handleSort(key.raw)}
                                 type="button"
-                                class="btn btn-secondary">
+                                class="btn btn-secondary {sort_by === key.raw ? 'active' : ''}">
                                     <i class="bi bi-arrow-down-up me-2"></i>{key.clean}
                             </button>
                         {/if}
