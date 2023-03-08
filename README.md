@@ -2,6 +2,10 @@
 
 A web interface for playing with web3 protocols and wallets.
 
+## APIs used
+
+* [CoinGecko API](https://www.coingecko.com/en/api/documentation) is used for price information
+
 
 ## Developing
 

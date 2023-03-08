@@ -1,4 +1,53 @@
 body {
-    background-color: lightgray;
+    background-color: black;
 }
 
+h1 {
+    color: aquamarine;
+}
+
+p {
+    color: lightgray
+}
+
+.navbar-brand {
+    color: aquamarine;
+}
+.navbar-brand:hover {
+    color: gold;
+}
+
+.nav-link {
+    color: aquamarine;
+}
+.nav-link:hover {
+    color: gold;
+}
+
+
+
+.btn-c {
+    color: black;
+    font-weight: 700;
+    border-radius: 32px;
+    padding: 5px 15px 5px 15px;
+    background-color: white;
+    border: 3px solid black;
+}
+
+
+.btn-c:hover {
+    background-color: aquamarine;
+    border: 3px solid gold;
+    color: black;
+}
+
+
+.dark-link {
+    text-decoration: none;
+    color: aquamarine;
+}
+.dark-link:hover {
+    text-decoration: underline;
+    color: gold;
+}

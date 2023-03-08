@@ -4,6 +4,6 @@
 
 <TopNavbar />
 
-<div class="p-5 mt-5">
+<div class="px-3 py-2">
     <slot></slot>
 </div>
