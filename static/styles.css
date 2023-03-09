@@ -12,17 +12,22 @@ p {
 }
 */
 .navbar-brand {
+    font-weight: 700;
     color: green;
+    text-shadow: 1px 1px 1px gold;
 }
 .navbar-brand:hover {
     color: gold;
+    text-shadow: 1px 1px 1px green;
 }
 
 .nav-link {
     color: green;
+    text-shadow: 1px 1px 1px gold;
 }
 .nav-link:hover {
     color: gold;
+    text-shadow: 1px 1px 1px green;
 }
 
 .sort-btn {

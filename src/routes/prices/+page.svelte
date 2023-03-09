@@ -14,10 +14,19 @@
     function handleSort(key) {
        sort_by = key
        sort_descending = !sort_descending
-       if (sort_descending) {
-            data.prices = data.prices.sort((a, b) => b[sort_by] - a[sort_by])
+       let testVal = data.prices[0][sort_by]
+       if (typeof testVal === 'string' || testVal instanceof String) {
+            if (sort_descending) {
+                data.prices = data.prices.sort((a, b) => a[sort_by].localeCompare(b[sort_by]))
+            } else {
+                data.prices = data.prices.sort((a, b) => b[sort_by].localeCompare(a[sort_by]))
+            }
        } else {
-            data.prices = data.prices.sort((a, b) => a[sort_by] - b[sort_by])
+            if (sort_descending) {
+                data.prices = data.prices.sort((a, b) => b[sort_by] - a[sort_by])
+            } else {
+                data.prices = data.prices.sort((a, b) => a[sort_by] - b[sort_by])
+            }
        }
     }
 
@@ -31,14 +40,14 @@
             <thead class="border-bottom border-dark">
                 {#each KEYS as key}
                     <th class="py-3 text-nowrap">
-                        {#if ["", "name"].includes(key.raw)}  
+                        {#if [""].includes(key.raw)}  
                             {key.clean}
                         {:else}
                             <button
                                 on:click={() => handleSort(key.raw)}
                                 type="button"
                                 class="sort-btn{sort_by === key.raw ? ' active' : ''}">
-                                    <i class="bi bi-arrow-down-up me-2"></i>{key.clean}
+                                    <i class="bi bi-{sort_by !== key.raw ? 'arrow-down-up' : sort_descending ? 'sort-down' : 'sort-up-alt'} me-2"></i>{key.clean}
                             </button>
                         {/if}
                     </th>
