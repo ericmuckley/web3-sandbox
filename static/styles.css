@@ -1,5 +1,6 @@
+/*
 body {
-    background-color: black;
+    background-color: lightgray;
 }
 
 h1 {
@@ -9,23 +10,57 @@ h1 {
 p {
     color: lightgray
 }
-
+*/
 .navbar-brand {
-    color: aquamarine;
+    color: green;
 }
 .navbar-brand:hover {
     color: gold;
 }
 
 .nav-link {
-    color: aquamarine;
+    color: green;
 }
 .nav-link:hover {
     color: gold;
 }
 
+.sort-btn {
+    padding: 5px 20px 5px 20px !important;
+    border-radius: 32px;
+    border: 1px solid lightgray;
+    background-color: white;
+    color: black;
+}
+
+.sort-btn.active {
+    border: 1px solid gray;
+    background-color: lightgray;
+    color: black;
+}
+
+.sort-btn:hover {
+    border: 1px solid gray;
+    background-color: lightgray;
+    color: black;
+}
 
 
+
+/*
+.btn-primary {
+    border: 1px solid black;
+    background-color: green !important;
+    color: white;
+}
+.btn-primary:hover {
+    border: 1px solid black;
+    background-color: gold !important;
+    color: white;
+}
+*/
+
+/*
 .btn-c {
     color: black;
     font-weight: 700;
@@ -51,3 +86,4 @@ p {
     text-decoration: underline;
     color: gold;
 }
+*/

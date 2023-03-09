@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-sm">
     <div class="container-fluid">
         <a class="navbar-brand" href="/">
-            web3sandbox
+            &#x1F3DD; sandbox
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-collapse">
             <span class="navbar-toggler-icon"></span>
@@ -15,7 +15,7 @@
                     <i class="bi bi-info-circle me-2"></i>ABOUT
                 </a>
             </div>
-            <button type="button" class="btn btn-c text-nowrap">
+            <button type="button" class="btn text-nowrap btn-success rounded-pill px-4">
                 <i class="bi bi-wallet-fill me-2"></i>Connect wallet
             </button>
         </div>

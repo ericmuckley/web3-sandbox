@@ -1,6 +1,5 @@
 <script>
     import { utils } from '../utils.js'
-
     export let data
     export let sort_by = "market_cap"
     export let sort_descending = true
@@ -24,11 +23,12 @@
 
 </script>
 
+
 {#if data.prices && data.prices.length}
 
     <div class="w-100" style="overflow-x: auto;">
-        <table class="table table-dark">
-            <thead class="bg-dark border-bottom border-light">
+        <table class="table">
+            <thead class="border-bottom border-dark">
                 {#each KEYS as key}
                     <th class="py-3 text-nowrap">
                         {#if ["", "name"].includes(key.raw)}  
@@ -37,7 +37,7 @@
                             <button
                                 on:click={() => handleSort(key.raw)}
                                 type="button"
-                                class="btn btn-secondary {sort_by === key.raw ? 'active' : ''}">
+                                class="sort-btn{sort_by === key.raw ? ' active' : ''}">
                                     <i class="bi bi-arrow-down-up me-2"></i>{key.clean}
                             </button>
                         {/if}
@@ -56,7 +56,7 @@
                                 {:else if key.raw === "current_price"}
                                     {utils.round(row[key.raw], 2)}
                                 {:else if key.raw === "price_change_percentage_24h"}
-                                    <span class="fw-bold" style="color: {row[key.raw] < 0 ? 'plum' : 'mediumspringgreen'}">
+                                    <span class="fw-bold" style="color: {row[key.raw] < 0 ? 'red' : 'limegreen'}">
                                         {utils.round(row[key.raw], 2)}
                                     </span>
                                 {:else}
