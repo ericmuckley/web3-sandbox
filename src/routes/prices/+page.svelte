@@ -37,25 +37,27 @@
 
     <div class="w-100" style="overflow-x: auto;">
         <table>
-            <thead class="">
-                {#each KEYS as key}
-                    <th class="py-3 px-3">
-                        {#if [""].includes(key.raw)}  
-                            {key.clean}
-                        {:else}
-                            <button
-                                on:click={() => handleSort(key.raw)}
-                                type="button"
-                                class="text-gray-200 bg-gray-800 px-5 py-2 rounded-full {sort_by === key.raw ? ' bg-gray-400 text-black' : ''}">
-                                    <i class="bi bi-{sort_by !== key.raw ? 'arrow-down-up' : sort_descending ? 'sort-down' : 'sort-up-alt'} mr-3"></i>{key.clean}
-                            </button>
-                        {/if}
-                    </th>
-                {/each} 
+            <thead>
+                <tr class="border-b-2 border-gray-300">
+                    {#each KEYS as key}
+                        <th class="py-2 px-2">
+                            {#if [""].includes(key.raw)}  
+                                {key.clean}
+                            {:else}
+                                <button
+                                    on:click={() => handleSort(key.raw)}
+                                    type="button"
+                                    class="text-gray-200 bg-gray-800 px-5 py-2 rounded-full {sort_by === key.raw ? ' bg-gray-400 text-black' : ''}">
+                                        <i class="bi bi-{sort_by !== key.raw ? 'arrow-down-up' : sort_descending ? 'sort-down' : 'sort-up-alt'} mr-3"></i>{key.clean}
+                                </button>
+                            {/if}
+                        </th>
+                    {/each} 
+                </tr>
             </thead>
             <tbody>
                 {#each data.prices as row}
-                    <tr>
+                    <tr class="border-b-2 border-gray-800">
                         {#each KEYS as key}
                             <td class="py-3 px-3 text-gray-300">
                                 {#if key.raw === ""}
