@@ -47,7 +47,7 @@
                                 <button
                                     on:click={() => handleSort(key.raw)}
                                     type="button"
-                                    class="text-gray-200 bg-gray-800 px-5 py-2 rounded-full {sort_by === key.raw ? ' bg-gray-400 text-black' : ''}">
+                                    class="px-5 py-2 rounded-full whitespace-nowrap {sort_by === key.raw ? 'bg-gray-400 text-black' : 'bg-gray-800 text-gray-200'}">
                                         <i class="bi bi-{sort_by !== key.raw ? 'arrow-down-up' : sort_descending ? 'sort-down' : 'sort-up-alt'} mr-3"></i>{key.clean}
                                 </button>
                             {/if}
@@ -86,10 +86,8 @@
 
 {:else}
 
-    <div class="d-flex justify-content-center">
-        <div class="spinner-border" role="status">
-            <span class="visually-hidden">Loading...</span>
-        </div>
-    </div>
+    <p class="text-gray-200 text-lg">
+        No price information is avilable.
+    </p>
 
 {/if}
