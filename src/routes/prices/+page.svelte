@@ -36,18 +36,18 @@
 {#if data.prices && data.prices.length}
 
     <div class="w-100" style="overflow-x: auto;">
-        <table class="table">
-            <thead class="border-bottom border-dark">
+        <table>
+            <thead class="">
                 {#each KEYS as key}
-                    <th class="py-3 text-nowrap">
+                    <th class="py-3 px-3">
                         {#if [""].includes(key.raw)}  
                             {key.clean}
                         {:else}
                             <button
                                 on:click={() => handleSort(key.raw)}
                                 type="button"
-                                class="sort-btn{sort_by === key.raw ? ' active' : ''}">
-                                    <i class="bi bi-{sort_by !== key.raw ? 'arrow-down-up' : sort_descending ? 'sort-down' : 'sort-up-alt'} me-2"></i>{key.clean}
+                                class="text-gray-200 bg-gray-800 px-5 py-2 rounded-full {sort_by === key.raw ? ' bg-gray-400 text-black' : ''}">
+                                    <i class="bi bi-{sort_by !== key.raw ? 'arrow-down-up' : sort_descending ? 'sort-down' : 'sort-up-alt'} mr-3"></i>{key.clean}
                             </button>
                         {/if}
                     </th>
@@ -57,7 +57,7 @@
                 {#each data.prices as row}
                     <tr>
                         {#each KEYS as key}
-                            <td>
+                            <td class="py-3 px-3 text-gray-300">
                                 {#if key.raw === ""}
                                     <img src={row.image} width="30px" alt={`${row.id} image`}>
                                 {:else if key.raw === "market_cap"}
@@ -69,7 +69,7 @@
                                         {utils.round(row[key.raw], 2)}
                                     </span>
                                 {:else}
-                                    <a class="dark-link" href="https://www.coingecko.com/en/coins/{row.id}" target="_blank" rel="noreferrer">
+                                    <a class="text-green-300 hover:text-green-700" href="https://www.coingecko.com/en/coins/{row.id}" target="_blank" rel="noreferrer">
                                         {row.symbol.toUpperCase()}
                                     </a>
                                     <!--<span class="text-muted">{row[key.raw]}</span>-->
