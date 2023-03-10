@@ -33,7 +33,7 @@
     <button
         on:click={connectWallet}
         type="button"
-        class="whitespace-nowrap text-black px-5 py-1 rounded-full text-center mr-3 md:mr-0 bg-green-500 hover:bg-white">
+        class="whitespace-nowrap text-black px-5 py-1 rounded-full text-center mr-3 md:mr-0 bg-green-500 hover:bg-green-300">
             <i class="bi bi-wallet-fill mr-2"></i>Connect wallet
     </button>
 
@@ -42,7 +42,7 @@
     <button
         on:click={disconnectWallet}
         type="button"
-        class="whitespace-nowrap text-black px-5 py-1 rounded-full text-center mr-3 md:mr-0 bg-green-500 hover:bg-white">
+        class="whitespace-nowrap text-black px-5 py-1 rounded-full text-center mr-3 md:mr-0 bg-green-500 hover:bg-green-300">
             Disconnect wallet
     </button>
 

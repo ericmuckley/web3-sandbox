@@ -1,4 +1,4 @@
-import { COINGECKO_PRICE_URL, MORALIS_SERVER_URL, MORALIS_APP_ID } from '$env/static/private'
+import { COINGECKO_PRICE_URL } from '$env/static/private'
 
 export async function load() {
 
@@ -10,7 +10,7 @@ export async function load() {
     //let serverUrl = import.meta.env.VITE_PUBLIC_MORALIS_SERVER_URL;
     //let appId = import.meta.env.VITE_PUBLIC_MORALIS_APP_ID;
     // Start Moralis
-    Moralis.start({MORALIS_SERVER_URL, MORALIS_APP_ID})
+    //Moralis.start({MORALIS_SERVER_URL, MORALIS_APP_ID})
     // Let the app know it's started
     //moralisStarted = true
 

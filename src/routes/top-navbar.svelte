@@ -21,9 +21,9 @@
 
 <nav class="border-gray-200 sm:px-4 px-4 py-2 rounded bg-gray-900">
     <div class="container flex flex-wrap items-center justify-between mx-auto">
-        <div class="mr-2 border-b-2 {$page.url.pathname === '/' ? 'text-white border-white' : 'border-transparent text-green-500'}">
+        <div class="mr-2 border-b-2 {$page.url.pathname === '/' ? 'border-white' : 'border-transparent'}">
             <a href="/" class="flex items-center" on:click={() => {collapse(true)}}>
-                <div class="self-center text-2xl font-extrabold whitespace-nowrap py-2 px-3 rounded-xl {$page.url.pathname === '/' ? 'text-white' : 'text-green-500 hover:text-white hover:bg-gray-800'}">
+                <div class="self-center text-2xl font-extrabold whitespace-nowrap py-2 px-4 rounded-xl {$page.url.pathname === '/' ? 'text-white' : 'text-green-500 hover:text-white hover:bg-gray-800'}">
                     <span class="mr-2">&#x1F3DD;</span><span>sandbox</span>
                 </div>
             </a>
@@ -44,7 +44,7 @@
                 {#each items as item}
                     <li class="text-lg font-light border-b-2 {$page.url.pathname === item.href ? 'border-white' : 'border-transparent'}">
                         <a on:click={() => {collapse(true)}} href={item.href} class="whitespace-nowrap block md:p-0">
-                            <div class="py-2 px-3 rounded-xl {$page.url.pathname === item.href ? 'text-white' : 'text-green-500 hover:text-white hover:bg-gray-800'}">
+                            <div class="py-2 px-4 rounded-xl {$page.url.pathname === item.href ? 'text-white' : 'text-green-500 hover:text-white hover:bg-gray-800'}">
                                 <i class="bi {item.icon} mr-2"></i>{item.text}
                             </div>
                         </a>
