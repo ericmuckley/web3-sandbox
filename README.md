@@ -2,17 +2,12 @@
 
 A web interface for playing with web3 protocols and wallets.
 
-## APIs used
-
-* 
-
-
 ## Tech stack
 
 * [SvelteKit](https://kit.svelte.dev/) for application client, routing, and server
-* [TailwindCSS]9https://tailwindcss.com) for client styling
+* [TailwindCSS](https://tailwindcss.com) for client styling
 * [CoinGecko API](https://www.coingecko.com/en/api/documentation) for price information
-
+* [svelte-web3 / web3.js](https://github.com/clbrge/svelte-web3) for wallet connection
 
 ## Developing
 
@@ -33,6 +28,4 @@ To create a production version:
 npm run build
 ```
 
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+You can preview the production build with `npm run preview`. To deploy, install an [adapter](https://kit.svelte.dev/docs/adapters) for the target deployment environment.

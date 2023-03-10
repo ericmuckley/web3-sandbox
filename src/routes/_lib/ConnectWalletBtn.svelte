@@ -1,49 +1,34 @@
 <script>
-    import { currentUser } from "../store.js"
+    //import { currentUser } from "../store.js"
+    import { browser } from '$app/environment'
+    import { defaultEvmStores, web3, selectedAccount, connected, chainId, chainData } from 'svelte-web3'
 
     async function connectWallet() {
-
-        /*
-        console.log(Moralis)
-        const user = await Moralis.authenticate({
-            signingMessage: "Sign in with Ethereum"
-        })
-        */
-        $currentUser = 'e'
-        
-
-        console.log($currentUser)
+        defaultEvmStores.setProvider()
     }
 
-    // Sign out function
     async function disconnectWallet() {
-        
-        //await Moralis.User.logOut()
-        $currentUser = null
-        
-        //$currentUser = null
-        //console.log($currentUser)
+        defaultEvmStores.disconnect()
     }
-
 
 </script>
 
-{#if !$currentUser}
-
-    <button
-        on:click={connectWallet}
-        type="button"
-        class="whitespace-nowrap text-black px-5 py-1 rounded-full text-center mr-3 md:mr-0 bg-green-500 hover:bg-green-300">
-            <i class="bi bi-wallet-fill mr-2"></i>Connect wallet
-    </button>
-
+{#if browser}
+    {#if $connected}
+        <button
+            on:click={disconnectWallet}
+            type="button"
+            class="whitespace-nowrap text-black px-5 py-1 rounded-full text-center mr-3 md:mr-0 bg-green-500 hover:bg-green-300">
+                Disconnect {$selectedAccount.slice(0, 6)}...{$selectedAccount.slice(-4)}
+        </button>
+    {:else}
+        <button
+            on:click={connectWallet}
+            type="button"
+            class="whitespace-nowrap text-black px-5 py-1 rounded-full text-center mr-3 md:mr-0 bg-green-500 hover:bg-green-300">
+                <i class="bi bi-wallet-fill mr-2"></i>Connect wallet
+        </button>
+    {/if}
 {:else}
-
-    <button
-        on:click={disconnectWallet}
-        type="button"
-        class="whitespace-nowrap text-black px-5 py-1 rounded-full text-center mr-3 md:mr-0 bg-green-500 hover:bg-green-300">
-            Disconnect wallet
-    </button>
-
+    <div class='text-gray-200'>No browser wallet detected</div>
 {/if}
