@@ -4,10 +4,11 @@ A web interface for playing with web3 protocols and wallets.
 
 ## Tech stack
 
-* [SvelteKit](https://kit.svelte.dev/) for application client, routing, and server
+* [SvelteKit](https://kit.svelte.dev/) for application client, page routing, and server
 * [TailwindCSS](https://tailwindcss.com) for client styling
-* [CoinGecko API](https://www.coingecko.com/en/api/documentation) for price information
+* [CoinGecko API](https://www.coingecko.com/en/api/documentation) for current token price information
 * [svelte-web3 / web3.js](https://github.com/clbrge/svelte-web3) for wallet connection
+* [Moralis API](https://admin.moralis.io/web3apis) for wallet token holdings
 
 ## Developing
 
