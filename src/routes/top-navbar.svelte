@@ -1,8 +1,10 @@
 <script>
     import { page } from '$app/stores'
+    import { connected, chainData } from 'svelte-web3'
     import ConnectWalletBtn from './_lib/ConnectWalletBtn.svelte'
     export let items = [
         {text: "PRICES", icon: "bi-graph-up-arrow", href: "/prices"},
+        {text: "UPLOAD", icon: "bi-upload", href: "/upload"},
         {text: "ABOUT", icon: "bi-info-circle", href: "/about"},
     ]
 
@@ -28,6 +30,12 @@
             </a>
         </div>
         <div class="flex md:order-2">
+            {#if $connected}
+                <span class="text-gray-400 pt-2 mx-3 font-mono text-sm cursor-default">
+                    {$chainData.name}
+                </span>
+            {/if}
+
             <ConnectWalletBtn />
             <button 
                 on:click={() => {document.querySelector(".navbar-collapse").classList.toggle("hidden")}}
