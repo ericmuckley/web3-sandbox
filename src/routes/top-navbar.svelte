@@ -4,7 +4,7 @@
     import ConnectWalletBtn from './_lib/ConnectWalletBtn.svelte'
     export let items = [
         {text: "PRICES", icon: "bi-graph-up-arrow", href: "/prices"},
-        {text: "ENCRYPT", icon: "bi-file-earmark-lock2", href: "/encrypt"},
+        {text: "ENCRYPT", icon: "bi-file-lock2", href: "/encrypt"},
         {text: "STORE", icon: "bi-cloud-arrow-up", href: "/store"},
     ]
 

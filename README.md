@@ -9,6 +9,7 @@ A web interface for playing with web3 protocols and wallets.
 * [CoinGecko API](https://www.coingecko.com/en/api/documentation) for current token price information
 * [svelte-web3 / web3.js](https://github.com/clbrge/svelte-web3) for wallet connection
 * [Moralis API](https://admin.moralis.io/web3apis) for wallet token holdings
+* [Pinata](https://app.pinata.cloud/pinmanager) for file storage on IPFS
 
 ## Developing
 
