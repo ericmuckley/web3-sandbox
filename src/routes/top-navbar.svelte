@@ -4,8 +4,8 @@
     import ConnectWalletBtn from './_lib/ConnectWalletBtn.svelte'
     export let items = [
         {text: "PRICES", icon: "bi-graph-up-arrow", href: "/prices"},
-        {text: "UPLOAD", icon: "bi-upload", href: "/upload"},
-        {text: "ABOUT", icon: "bi-info-circle", href: "/about"},
+        {text: "ENCRYPT", icon: "bi-file-earmark-lock2", href: "/encrypt"},
+        {text: "STORE", icon: "bi-cloud-arrow-up", href: "/store"},
     ]
 
     function collapse(collapse) {
@@ -46,10 +46,10 @@
                     </svg>
             </button>
         </div>
-        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 navbar-collapse">
-            <ul class="flex flex-col px-3 py-2 mt-4 border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 bg-gray-800 md:bg-gray-900 border-gray-700">
+        <div class="items-center justify-between hidden mx-auto w-full md:flex md:w-auto md:order-1 navbar-collapse">
+            <ul class="flex flex-col py-2 mt-4 border rounded-lg md:flex-row md:space-x-2 md:mt-0 md:text-s md:font-medium md:border-0 bg-gray-800 md:bg-gray-900 border-gray-700">
                 {#each items as item}
-                    <li class="mx-0 text-lg font-light border-b-2 {$page.url.pathname === item.href ? 'border-white' : 'border-transparent'}">
+                    <li class="mx-0 font-light border-b-2 {$page.url.pathname === item.href ? 'border-white' : 'border-transparent'}">
                         <a on:click={() => {collapse(true)}} href={item.href} class="whitespace-nowrap block md:p-0">
                             <div class="py-2 px-4 rounded-xl {$page.url.pathname === item.href ? 'text-white' : 'text-green-500 hover:text-white hover:bg-gray-800'}">
                                 <i class="bi {item.icon} mr-2"></i>{item.text}

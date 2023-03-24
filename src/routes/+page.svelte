@@ -64,7 +64,7 @@
 
         {#if loadingTokens}
 
-        <div>
+        <div class="text-center my-3">
             <Spinner />
             Loading tokens...
         </div>
@@ -72,6 +72,7 @@
         {:else}
 
             {#if tokens && tokens.length}
+                <h3 class="text-gray-300 text-xl">My tokens</h3>
 
                 {#each tokens as token}
                     {#if token.logo}
