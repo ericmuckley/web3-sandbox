@@ -47,9 +47,9 @@
             </button>
         </div>
         <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 navbar-collapse">
-            <ul class="flex flex-col px-4 py-2 mt-4 border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 bg-gray-800 md:bg-gray-900 border-gray-700">
+            <ul class="flex flex-col px-3 py-2 mt-4 border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 bg-gray-800 md:bg-gray-900 border-gray-700">
                 {#each items as item}
-                    <li class="text-lg font-light border-b-2 {$page.url.pathname === item.href ? 'border-white' : 'border-transparent'}">
+                    <li class="mx-0 text-lg font-light border-b-2 {$page.url.pathname === item.href ? 'border-white' : 'border-transparent'}">
                         <a on:click={() => {collapse(true)}} href={item.href} class="whitespace-nowrap block md:p-0">
                             <div class="py-2 px-4 rounded-xl {$page.url.pathname === item.href ? 'text-white' : 'text-green-500 hover:text-white hover:bg-gray-800'}">
                                 <i class="bi {item.icon} mr-2"></i>{item.text}

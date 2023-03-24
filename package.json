@@ -18,6 +18,15 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"svelte-web3": "^4.0.2"
+		"@esbuild-plugins/node-globals-polyfill": "^0.2.3",
+		"@ethereumjs/tx": "^4.1.1",
+		"@metamask/detect-provider": "^2.0.0",
+		"@metamask/eth-sig-util": "^5.0.2",
+		"buffer": "^6.0.3",
+		"ethereumjs-util": "^7.1.5",
+		"ethers": "^6.2.2",
+		"events": "^3.3.0",
+		"svelte-web3": "^4.0.2",
+		"tweetnacl": "^1.0.3"
 	}
 }
