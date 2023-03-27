@@ -1,5 +1,5 @@
 // https://github.com/PinataCloud/Pinata-SDK
-import pinataSDK from '@pinata/sdk'
+//import pinataSDK from '@pinata/sdk'
 import { PINATA_API_KEY, PINATA_API_SECRET, PINATA_JWT } from '$env/static/private'
 
 

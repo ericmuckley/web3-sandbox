@@ -20,8 +20,8 @@
 </script>
 
 
-<nav class="border-gray-200 sm:px-4 px-4 py-2 rounded bg-gray-900">
-    <div class="container flex flex-wrap items-center justify-between mx-auto">
+<nav class="border-gray-200 sm:px-4 py-2 rounded bg-gray-900">
+    <div class="container flex flex-wrap items-center justify-between">
         <div class="mr-2 border-b-2 {$page.url.pathname === '/' ? 'border-white' : 'border-transparent'}">
             <a href="/" class="flex items-center" on:click={() => {collapse(true)}}>
                 <div class="self-center text-2xl font-extrabold whitespace-nowrap py-2 px-4 rounded-xl {$page.url.pathname === '/' ? 'text-white' : 'text-green-500 hover:text-white hover:bg-gray-800'}">
@@ -29,7 +29,7 @@
                 </div>
             </a>
         </div>
-        <div class="flex md:order-2">
+        <div class="flex md:order-2 ml-auto">
             {#if $connected}
                 <span class="text-gray-400 pt-2 mx-3 font-mono text-sm cursor-default">
                     {$chainData.name}
